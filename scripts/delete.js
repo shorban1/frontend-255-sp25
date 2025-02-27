@@ -22,7 +22,7 @@ async function getAllSongs() {
 async function deleteSong() {
   const songID = document.querySelector("#songDropdown option:checked").value;
   const response = await fetch(
-    "https://right-horn-flamingo.glitch.me/api/songs" + songID,
+    "https://right-horn-flamingo.glitch.me/api/songs/" + songID,
     {
       method: "DELETE",
     }
