@@ -34,7 +34,7 @@ window.onload = () => {
       localStorage.setItem("uname", uname);
       localStorage.setItem("auth", auth);
 
-      window.location.replace("/index.html");
+      window.location.replace("/frontend-255-sp25/index.html");
     } else {
       document.querySelector("#errorMsg").innerText =
         "Bad username and password";
