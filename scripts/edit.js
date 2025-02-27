@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", async function () {
   const urlparam = new URLSearchParams(window.location.search);
   const songID = urlparam.get("id");
   const response = await fetch(
-    "https://right-horn-flamingo.glitch.me/api/songs" + songID
+    "https://right-horn-flamingo.glitch.me/api/songs/" + songID
   );
   if (response.ok) {
     let song = await response.json();
@@ -32,7 +32,7 @@ async function updateSong() {
       : [],
   };
   const response = await fetch(
-    "https://right-horn-flamingo.glitch.me/api/songs" + songID,
+    "https://right-horn-flamingo.glitch.me/api/songs/" + songID,
     {
       method: "PUT",
       headers: {
