@@ -2,7 +2,9 @@ addEventListener("DOMContentLoaded", async function () {
   document.querySelector("#updateBtn").addEventListener("click", updateSong);
   const urlparam = new URLSearchParams(window.location.search);
   const songID = urlparam.get("id");
-  const response = await fetch("http://localhost:3000/api/songs/" + songID);
+  const response = await fetch(
+    "https://right-horn-flamingo.glitch.me/api/songs" + songID
+  );
   if (response.ok) {
     let song = await response.json();
     document.querySelector("#songID").value = song._id;
@@ -30,7 +32,7 @@ async function updateSong() {
       : [],
   };
   const response = await fetch(
-    "https://psychedelic-tidal-wash.glitch.me/api/songs/" + songID,
+    "https://right-horn-flamingo.glitch.me/api/songs" + songID,
     {
       method: "PUT",
       headers: {

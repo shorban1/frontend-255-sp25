@@ -11,10 +11,11 @@ async function addSong() {
     genre: document.querySelector("#genre").value
       ? document.querySelector("#genre").value.split(",")
       : [],
+    username: localStorage.getItem("uname"),
   };
 
   const response = await fetch(
-    "https://psychedelic-tidal-wash.glitch.me/api/songs",
+    "https://right-horn-flamingo.glitch.me/api/songs",
     {
       method: "POST",
       headers: {
